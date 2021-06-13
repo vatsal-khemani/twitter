@@ -17,23 +17,23 @@ function Post({
     return (
         <div className="post">
             <div className="post__avatar">
-                <Avatar src="https://pi.tedcdn.com/r/s3.amazonaws.com/ted.conferences.profiles/00/00/11/7c/0b/1145867.jpeg?"/>
+                <Avatar src={avatar}/>
             </div>
             <div className="post__body">
                 <div className="post__header">
                     <div className="post__headerText">
                         <h3>
-                           Vatsal Khemani
+                           {displayName}
                            <span className="post__headerSpecial">
-                           <VerifiedUserIcon className="post__badge"/>@vatsalkhemani
+                           {verified && <VerifiedUserIcon className="post__badge"/>}@{username}
                            </span> 
                         </h3>
                     </div>
                     <div className="post__headerDescription">
-                        <p>This is a dummy header text</p>
+                    <p>{text}</p>
                     </div>
                 </div>
-                <img src="https://pbs.twimg.com/profile_images/1308404028972445700/RR_3-veO_400x400.jpg" alt="img not found"/>
+                <img src={image} alt=""/>
                 <div className="post__footer">
                     <ChatBubbleOutlineIcon fontSize="small" />
                     <RepeatIcon fontSize="small" />
